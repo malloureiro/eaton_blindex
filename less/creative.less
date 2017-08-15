@@ -1,0 +1,563 @@
+@import "variables.less";
+@import "mixins.less";
+
+// Global Components
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    .serif-font;
+}
+
+hr {
+    border-color: @theme-primary;
+    border-width: 3px;
+    max-width: 50px;
+}
+
+hr.light {
+    border-color: white;
+}
+
+a {
+	cursor: pointer;
+    .transition-all;
+    color: @theme-primary;
+    &:hover,
+    &:focus {
+        color: darken(@theme-primary, 10%);
+    }
+}
+
+// CSS Reset
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    .sans-serif-font;
+	padding: 0;
+	margin: 0;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+	padding: 0;
+	margin: 0;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	padding: 0;
+	margin: 0;
+}
+
+.text-faded {
+    color: fade(white, 70%);
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.container {
+    padding: 0;
+	margin-bottom: 20px;
+	width: 960px;
+}
+
+// Button Styles
+.btn-default {
+    .button-variant(@gray-darker;white;white);
+}
+
+.btn-primary {
+    background-color: @theme-primary;
+	color: white;
+	padding: 20px 35px;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+// Eletromec CSS
+header {
+    .container {
+        background-color: @gray-dark;
+        p {
+            color: white;
+            font-size: 28px;
+            padding: 30px;
+        }
+        .banner-buttons {
+            float: right;
+            margin: 10px 30px 0 0;
+            ul > li {
+                list-style-type: none;
+                display: inline;
+                background-color: @gray-lighter;
+                padding: 1px 10px;
+                margin-right: 5px;
+                cursor: pointer;
+                transition: all 0.5s;
+                &:hover {
+                  background-color: fade(@gray-lighter, 70%);
+                }
+            }
+            .active {
+                background-color: @gray-darker;
+                &:hover {
+                    background-color: @gray-darker;
+                }
+            }
+        }
+    }
+}
+
+.bg-white {
+    background-color: white;
+    padding: 30px;
+    p {
+        font-size: 16px;
+        color: @gray-dark;
+    }
+	h1 {
+		color: @theme-primary;
+		font-family: EatonReg;
+	}
+	ul {
+		margin: 20px 0 0 20px;
+		li {
+			color: @gray-dark;
+		}
+	}
+}
+
+.bg-gray-light {
+    background-color: @gray-light;
+	.content-group {
+		margin-top: 20px;
+	}
+    p {
+        font-size: 16px;
+        color: @gray-dark;
+    }
+    h1 {
+        color: @theme-primary;
+    }
+    h3 {
+        color: @theme-primary;
+    }
+	ul {
+		padding-left: 20px;
+	}
+	ul > li {
+		font-size: 16px;
+        color: @gray-dark;
+	}
+    .more-details {
+        height: 220px;
+        span {
+            background-color: @gray-dark;
+            padding: 10px 25px;
+            cursor: pointer;
+            position: absolute;
+            bottom: 0;
+            right: 15px;
+			transition: all 0.5s;
+			color: white;
+        }
+		span:hover {
+			background-color: fade(@gray-dark, 70%);
+		}
+    }
+}
+
+.bg-gray-dark {
+    background-color: @gray-dark;
+	h1 {
+        color: white;
+		padding: 15px 25px;
+    }
+}
+
+.banner {
+	padding-bottom: 5px;
+	margin-bottom: 0;
+}
+
+.bg-gray {
+    background-color: @gray;
+	ul {
+		font-size: 18px;
+		color: @gray-dark;
+		padding: 25px 45px;
+		li {
+			list-style-type: square;
+		}
+	}
+
+	ul > ul {
+		padding-top: 2px;
+		li {
+			list-style-type: circle;
+		}
+	}
+}
+
+.section-header {
+	margin-bottom: 0;
+	padding: 3px 25px;
+	span {
+		color: white;
+		font-size: 18px;
+	}
+}
+
+table {
+	margin: 20px 0 0 0!important;
+	thead > tr > th:first-child {
+		border-left: 0!important;
+	}
+	thead > tr > th:last-child {
+		border-right: 0!important;
+	}
+	tbody > tr > td:first-child {
+		border-left: 0!important;
+	}
+	tbody > tr > td:last-child {
+		border-right: 0!important;
+	}
+	thead > tr > th {
+		background-color: @theme-primary;
+		color: white;
+		font-size: 14px;
+		font-weight: lighter;
+		text-align: center;
+		border: 2px solid @gray!important;
+		border-top: 0!important;
+		vertical-align: middle!important;
+	}
+	tbody > tr > td {
+		color: black;
+		font-size: 14px;
+		text-align: center;
+		border: 2px solid @gray!important;
+		padding: 0!important;
+		vertical-align: middle!important;
+	}
+	.empty-column, .img-column {
+		background-color: @gray-light;
+		border: 2px solid @gray-light!important;
+		vertical-align: middle!important;
+		img {
+			padding: 0 10px;
+		}
+	}
+	tbody > tr > .highlight-column {
+		background-color: @blue-highlight;
+		.sans-serif-font;
+		font-weight: bold;
+	}
+	tbody > tr > .highlight-column-gray {
+		.sans-serif-font;
+		font-weight: bold;
+	}
+	tbody > .highlight-row > td {
+		background-color: @blue-highlight;
+	}
+	tbody > .highlight-row > td:last-child {
+		.sans-serif-font;
+		font-weight: bold;
+	}
+	tbody > .highlight-row-gray > td:last-child {
+		.sans-serif-font;
+		font-weight: bold;
+	}
+}
+
+.elcm-table > thead > tr > th:first-child, .elcm-table > tbody > tr > td:first-child {
+	text-align: left;
+	padding-left: 30px!important;
+}
+
+.table-bottom {
+	border-left:0!important;
+   	border-right: 0!important;
+	margin: 0!important;
+	tbody > tr {
+		td {
+			border-left:0!important;
+		   	border-right: 0!important;
+		}
+		.gray-column {
+			background-color: @gray-dark;
+			padding: 3px 25px;
+			border: 0!important;
+			span {
+				color: white;
+				font-size: 18px;
+			}
+		}
+		.white-column {
+			background-color: white;
+			padding: 3px 25px;
+			border: 0!important;
+		}
+		.header-column {
+			vertical-align: bottom!important;
+			border: 0!important;
+			padding: 80px 0 0 0!important;
+		}
+	}
+}
+
+.text-primary {
+	color: @theme-primary;
+	font-weight: bold;
+}
+
+.text-position-left {
+	text-align: left!important;
+	padding-left: 30px!important;
+}
+
+.vcenter {
+	display: flex;
+    align-items: center;
+}
+
+.black {
+	color: black!important;
+}
+
+.dropdown:hover .dropdown-menu {
+	display: block;
+	margin-top: 0; // remove the gap so it doesn't close
+	cursor: pointer;
+ }
+
+.nav-elements {
+	margin-top: 40px;
+}
+
+.dropdown-menu {
+	background-color: @gray-light;
+	top: 27px;
+	padding: 10px 0;
+	border-radius: 0;
+	border-top: 0;
+	li {
+		padding: 0 15px;
+		.title, .title:hover {
+			background-color: @theme-primary-light;
+			color: white;
+			font-family: EatonMed;
+		}
+		.secundary-title, .secundary-title:hover {
+			background-color: @gray;
+			color: @theme-primary-light;
+			font-family: EatonMed;
+		}
+		a {
+			color: @theme-primary-light;
+			font-size: 14px;
+		}
+		a:hover {
+			text-decoration: underline;
+			background-color: @gray-light;
+			color: @theme-primary-light;
+		}
+	}
+}
+
+.dropdown-button {
+	padding: 10px 20px;
+	span {
+ 		font-size: 16px;
+	}
+}
+
+.dropdown-button:hover, .btn-selected {
+	text-decoration: none;
+	background-color: @gray-light;
+	color: @gray-darker;
+}
+
+.divider {
+	background-color: @theme-primary;
+	width: 1px;
+	height: 37px;
+	float: left;
+	margin-top: -7px;
+}
+
+/* Classes Footer - Eaton */
+
+#footer {
+    background: #eee;
+    position: relative;
+    width: 100%;
+    padding: 19px;
+    float: left;
+	border-top: 2px solid @theme-primary;
+}
+
+#footer a {
+    text-decoration: none;
+    color: @theme-primary-light;
+    line-height: 17px;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+}
+
+.footerHeader {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.footercolumn {
+    float: left;
+    width: 142px;
+    margin-right: 11px;
+}
+
+.footercolumn_last {
+    float: left;
+    width: 142px;
+}
+
+.footercolumn li, .footercolumn_last li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    text-decoration: none;
+    list-style: none outside none;
+}
+
+#FooterImages {
+    clear: left;
+    float: left;
+    position: relative;
+    width: 250px;
+}
+
+.subheadtitle {
+    padding-top: 10px;
+}
+
+.subheadtitle p {
+    font-weight: bold;
+}
+
+.copyright {
+    color: #666;
+}
+
+.featureR {
+    margin-top: 10px;
+}
+
+.controlstyle {
+    float: right;
+    margin-right: 86px;
+    width: 100px;
+}
+
+.controlstyle1 {
+    float: left;
+    width: 60px;
+}
+
+.controlstyle a {
+    outline: none;
+}
+
+.controlstyle a img {
+    border-width: 0;
+}
+
+.controlstyle a.selectedcontrol img {
+    border-bottom: 4px solid darkred;
+}
+
+#fontIcons {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+#fontIcons li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    top: 0;
+}
+
+#fontIcons li, #fontIcons a {
+    display: block;
+    height: 24px;
+}
+
+.fontMinus {
+    background: url("/img/public/eaton_sprt_img.png") no-repeat scroll -253px 0 transparent;
+    left: 0;
+    width: 26px;
+}
+
+.fontPlus {
+    background: url("/img/public/eaton_sprt_img.png") no-repeat scroll -225px 0 transparent;
+    left: 29px;
+    width: 26px;
+}
+
+.fontResize {
+    left: 60px;
+}
+
+#printIcons {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+#printIcons li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    top: 0;
+}
+
+#printIcons li, #printIcons a {
+    display: block;
+    height: 24px;
+}
+
+.printImg {
+    background: url("/img/public/eaton_sprt_img.png") no-repeat scroll -169px 0 transparent;
+    left: 0;
+    width: 26px;
+}
+
+.mailImg {
+    background: url("/img/public/eaton_sprt_img.png") no-repeat scroll -197px 0 transparent;
+    left: 29px;
+    width: 26px;
+}
+
+.subheadtitle {
+    color: #333;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
