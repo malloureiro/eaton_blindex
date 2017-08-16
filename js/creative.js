@@ -1,4 +1,3 @@
-
 setTimeout(function() {
     "use strict"; // start of use strict
 
@@ -6,7 +5,7 @@ setTimeout(function() {
         // get the actual banner on the page
         var currentImage = $(this).attr('data-banner');
         // set default path to images
-        var path = 'img/banners/';
+        var path = 'img/home/';
         // transiction effect when change the image
         $('#banner').fadeOut(function(){
             $(this).attr('src', path + currentImage + '.jpg');

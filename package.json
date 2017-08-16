@@ -1,7 +1,6 @@
 {
-  "name": "eletromec",
-  "title": "Eletromec",
-  "version": "1.0",
+  "name": "blindex",
+  "title": "Blindex",
   "author": "Marco Souza/Mariana Loureiro",
   "devDependencies": {
     "bootstrap": "^3.3.7",
@@ -16,9 +15,5 @@
     "jquery": "^1.11.3",
     "magnific-popup": "^1.1.0",
     "scrollreveal": "^3.1.4"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/marcosouza93/eletromec.git"
   }
 }

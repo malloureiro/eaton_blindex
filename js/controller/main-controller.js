@@ -1,69 +1,78 @@
 app.controller('initialPageController', function($scope) {
     $scope.itens = [
         {
-            title: 'Linha ELCM',
-            subTitle: 'Disjuntores em Caixa Moldada',
-            description: 'A linha de disjuntores em caixa moldada ELCM é um novo <br> desenvolvido com base em normas internacionais, <br> avançada e novo design.',
-            imagePath: 'img/inicial/ELCM.jpg',
-            pageLink: '#elcm'
+            subTitle: 'Mais resistente. <br> Mais acionamento. <br> Muito mais forte.',
+            imagePath: 'img/banners/Banner-Serie-20.jpg',
+            descriptionList: [
+                'Forte, extremamente robusto, com frontal <br> metálico totalmente construído em Zamak <br> com detalhe em aro cromado, perfeito <br> para aplicações em serviços pesados e em <br> condições agressivas de uso.'
+            ],
+            pageLink: '#serie20'
         },
         {
-            title: 'Linha ELMD',
-            subTitle: 'Minidisjuntores',
-            imagePath: 'img/inicial/ELMD.jpg',
+            title: 'Sirenes e Alarmes',
+            subTitle: 'Mais alto. <br> Mais resistência. <br> Muito mais ﬂexível.',
+            imagePath: 'img/banners/Banner-Sirenes.jpg',
             descriptionList: [
-                'Proteção contra curto-circuito;',
-                'Proteção contra sobrecarga;',
-                'Função de isolamento;',
-                'Suporte para instalação em trilho DIN (35mm);',
-                'Indicação da posição de contato.'
+                'A linha de Sirenes e Alarmes traz várias opções <br> audiovisuais, sonoros direcionais, omnidirecionais, <br> IP65 além dos convencionais sonoros <br> para porta de painel.'
             ],
-            pageLink: '#elmd'
+            pageLink: '#sirenes_alarmes'
         },
         {
-            title: 'Linha ELPS',
-            subTitle: 'Protetores contra surto',
-            imagePath: 'img/inicial/ELPS.jpg',
+            title: 'Linha M22',
+            subTitle: 'Mais tecnologia. <br> Mais moderno. <br> Muito mais design.',
+            imagePath: 'img/banners/Banner-M22.jpg',
             descriptionList: [
-                'Protege sistemas elétricos e aparelhos elétricos contra surto de tensão causado por descarga de raios e contra sobretensão instantânea;',
-                'Imáx 40kA / In 20kA;',
-                'Uc 275V (Tensão de operação contínua);',
-                'DPS classe II.'
+                'A Linha M22 apresenta o que há de <br> melhor em matéria de luminosidade, <br> consumo de energia e vida útil.'
             ],
-            pageLink: '#elps'
+            pageLink: '#linhaM22'
         },
         {
-            title: 'Linha ELDR',
-            subTitle: 'Interruptores diferenciais residuais',
-            imagePath: 'img/inicial/ELDR.jpg',
+            title: 'Linha A22',
+            subTitle: 'Mais possibilidades. <br> Mais versátil. <br> Muito mais acessível.',
+            imagePath: 'img/banners/Banner-A22.jpg',
             descriptionList: [
-                'Proteção contra fulga;',
-                'Tipo eletromagnético;',
-                'Indicação de falha de fuga;',
-                'Suporte para instalação em trilho DIN (35mm).'
+                'Furação Ø 22,5mm',
+                'Alto grau de proteção IP65',
+                'Anel frontal cromado',
+                'Certiﬁcação CE e UL'
             ],
-            pageLink: '#eldr'
+            pageLink: '#linhaA22'
         },
         {
-            title: 'Fusível Cartucho',
-            imagePath: 'img/inicial/cartucho.jpg',
+            title: 'Linha RMQ16',
+            subTitle: 'Mais compacto. <br> Mais possibilidades. <br> Muito mais espaço.',
+            imagePath: 'img/banners/Banner-RMQ16.jpg',
             descriptionList: [
-                'Solução 10x38mm até 32A;',
-                'Classe de atuação gL/gG.'
+                'Desenhada especialmente para máquinas <br> de pequeno porte. Desenho quadrado e <br> furação de 16mm permite que vários <br> elementos sejam montados lado a lado.'
             ],
-            pageLink: '#fusivel_cartucho'
+            pageLink: '#linhaRMQ16'
         },
         {
-            title: 'Fusível NH',
-            imagePath: 'img/inicial/NH.jpg',
+            title: 'Chaves',
+            subTitle: 'Mais ergonômico. <br> Mais opções de montagem. <br> Muito mais segurança.',
+            imagePath: 'img/banners/Banner-Chaves.jpg',
             descriptionList: [
-                'Tensão 500Vac;',
-                'Correntes de 2 a 2000A;',
-                'Fabricados conforme IEC 60269;',
-                'Tamanhos: 000, 00, 1, 2, 3, 4 e 5;',
-                'Ações: gG/gL - para uso gera e aR - ultrarrápido'
+                'Com opções de chaves até 3150A <br> é uma das linhas mais completas <br> do mercado.'
             ],
-            pageLink: '#fusivel_nh'
+            pageLink: '#chaves'
+        },
+        {
+            title: 'Caixas',
+            subTitle: 'Mais proteção. <br> Mais opções. <br> Muito mais forte.',
+            imagePath: 'img/banners/Banner-Caixas.jpg',
+            descriptionList: [
+                'Para montagem de botões plásticos ou <br> metálicos. A linha de botoeiras se adequa <br> aos ambientes mais agressivos.'
+            ],
+            pageLink: '#caixas'
+        },
+        {
+            title: 'Linhas SL7 & SL4',
+            subTitle: 'Mais brilho. <br> Mais eﬁciente. <br> Muito mais claro.',
+            imagePath: 'img/banners/Banner-SL7&SL4.jpg',
+            descriptionList: [
+                'Com grau de proteção IP65 mesmo com <br> elementos sonoros e iluminação LED, a <br> família SL4 e SL7 possui a robustez <br> necessária com a clareza que <br> você precisa. '
+            ],
+            pageLink: '#linhasSL7_SL4'
         }
     ];
 });

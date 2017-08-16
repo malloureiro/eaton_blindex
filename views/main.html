@@ -1,0 +1,68 @@
+<header>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<a href="#" id="mailto-banner">
+					<img src="img/home/01.jpg" alt="Banner Blindex" width="100%" id="banner" />
+				</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-8">
+				<p>
+					Botões montados para <br>
+					aplicações especiais e pesadas.
+				</p>
+			</div>
+			<div class="col-xs-4">
+				<div class="banner-buttons">
+					<ul>
+						<li class="active" data-banner="01"></li>
+						<li data-banner="02"></li>
+						<li data-banner="03"></li>
+						<li data-banner="04"></li>
+						<li data-banner="05"></li>
+						<li data-banner="06"></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<section>
+	<div class="container bg-white">
+		<div class="row">
+			<div class="col-xs-12">
+				<p>
+					Milhares de possibilidades e aplicações, qualidade e padronização universal, <br>
+					tecnologias exclusivas e capacidade de suprir todas as demandas dos mais diversos <br>
+					setores, representando assim o que há de melhor em Botões de Comando.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section ng-repeat="item in itens" style="margin-bottom: 50px;">
+	<div class="container bg-gray-light">
+		<div class="row">
+			<div class="col-md-6"> 
+				<img src="{{ item.imagePath }}" width="100%"/>
+			</div>
+			<div class="col-md-4">
+				<div class="content-group">
+				<h3 ng-bind-html="item.subTitle"></h3>
+					<ul style="margin-top: 10px;">
+						<li ng-repeat="listItem in item.descriptionList" ng-bind-html="listItem"></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="more-details">
+					<a href="{{ item.pageLink }}"><span>Saiba mais...</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

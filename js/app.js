@@ -1,4 +1,4 @@
-var app = angular.module('eletromec', ['ngSanitize','ngRoute']);
+var app = angular.module('blindexByEaton', ['ngSanitize','ngRoute']);
 
 app.config(['$routeProvider','$locationProvider', function ($routeProvider, $locationProvider) {
     $routeProvider
@@ -6,23 +6,29 @@ app.config(['$routeProvider','$locationProvider', function ($routeProvider, $loc
        templateUrl: "/views/main.html",
        controller:'initialPageController',
       })
-      .when('/elcm', {
-       templateUrl: "/views/elcm/view.html"
+      .when('/serie20', {
+       templateUrl: "/views/serie20/view.html"
       })
-      .when('/elmd', {
-       templateUrl: "/views/elmd/view.html"
+      .when('/sirenes_alarmes', {
+       templateUrl: "/views/sirenes_alarmes/view.html"
       })
-      .when('/eldr', {
-       templateUrl: "/views/eldr/view.html"
+      .when('/linhaM22', {
+       templateUrl: "/views/linhaM22/view.html"
       })
-      .when('/elps', {
-       templateUrl: "/views/elps/view.html"
+      .when('/linhaA22', {
+       templateUrl: "/views/linhaA22/view.html"
       })
-      .when('/fusivel_cartucho', {
-       templateUrl: "/views/fusivel_cartucho/view.html"
+      .when('/linhaRMQ16', {
+       templateUrl: "/views/linhaRMQ16/view.html"
       })
-      .when('/fusivel_nh', {
-       templateUrl: "/views/fusivel_nh/view.html"
+      .when('/chaves', {
+       templateUrl: "/views/linhaChaves/view.html"
+      })
+      .when('/caixas', {
+       templateUrl: "/views/linhaCaixas/view.html"
+      })
+      .when('/linhasSL7_SL4', {
+       templateUrl: "/views/linhaSL7_SL4/view.html"
       })
       .otherwise({ redirectTo: '/' });
 
